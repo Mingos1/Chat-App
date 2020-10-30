@@ -1,0 +1,80 @@
+body,
+html {
+    height: 100vh;  
+}
+
+/*Grid */
+
+header {
+    background-color: yellow;
+}
+
+main {
+    background-color: rgb(158, 164, 247);
+    padding: 10px;
+    min-height: 100%;
+    display: flex;
+}
+
+footer {
+    background-color: yellow;
+}
+
+/* chat box*/
+
+#chat-wrapper {
+    background-color: #F0F1F2;
+    padding: 2px;
+    border-radius: 14px;
+    width: 70%;
+}
+
+#chat-window {
+    border: 2px solid black;
+    height: 80%;
+}
+
+/* Room */
+
+#room-wrapper {
+    background-color: #F0F1F2;
+    padding: 2px;
+    border-radius: 14px;
+
+    width: 30%;
+}
+
+#room-window {
+    height: 90%;
+    margin: 10px;
+    border: 2px solid black;
+}
+
+/* Combos */
+
+#chat-wrapper,
+#room-wrapper {
+    margin: .2em;
+}
+
+/* Text box */
+
+#text-wrapper {
+    border: 2px solid black;
+    padding: .5em;
+
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+#text-input {
+    width: 80%;
+    padding: 10px;
+}
+
+#text-send {
+    padding: 10px;
+    margin-left: 10px;
+}
