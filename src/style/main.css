@@ -1,80 +1,161 @@
 body,
 html {
     height: 100vh;  
+    margin: 0;
+    padding: 0;
 }
 
-/*Grid */
+/* Page top*/
 
-header {
-    background-color: yellow;
+#page-header-wrapper {
+    background-color:  #6610F2;
+    color: #EEEEF6;
+    padding: 20px;
+    margin: 2px;
+    border-radius: 14px;
 }
 
+
+/* Main box */
 main {
-    background-color: rgb(158, 164, 247);
+    background-color:  #ffffff;
     padding: 10px;
-    min-height: 100%;
+    min-height: 80%;
+
     display: flex;
+    flex-direction: row wrap;
 }
 
-footer {
-    background-color: yellow;
+main > #chat-wrapper {
+    flex: 3;
+}
+
+main > #room-wrapper {
+    flex: 1;
+}
+
+@media (max-width: 480px) {
+    main {
+        display: flex;
+        flex-flow: column wrap;
+        min-height: 100%;
+    }
+    main > #chat-wrapper {
+        flex: 3;
+        order: 1;
+    }
+    
+    main > #room-wrapper {
+        flex: 1;
+        order: 2;
+    }
 }
 
 /* chat box*/
 
 #chat-wrapper {
-    background-color: #F0F1F2;
-    padding: 2px;
+    background-color: #ffffff;
+    padding: 20px;
     border-radius: 14px;
-    width: 70%;
+
+    display: flex;
+    flex-direction: column;
+}
+
+
+#chat-wrapper > #chat-window{ 
+    flex: 10;
+}
+
+#chat-wrapper > #text-wrapper{ 
+    flex: 1;
 }
 
 #chat-window {
-    border: 2px solid black;
-    height: 80%;
+    /* border: 2px solid black; */
 }
 
 /* Room */
 
 #room-wrapper {
-    background-color: #F0F1F2;
+    background-color: #EEEEF6;
     padding: 2px;
     border-radius: 14px;
 
-    width: 30%;
+    display: flex;
+    flex-flow: column;
+}
+
+#room-wrapper > *{
+    margin: 9px;
+    padding: 1em;
+}
+
+#room-header {
+    flex: 1;   
 }
 
 #room-window {
-    height: 90%;
-    margin: 10px;
-    border: 2px solid black;
-}
-
-/* Combos */
-
-#chat-wrapper,
-#room-wrapper {
-    margin: .2em;
+    flex: 10;
+  /* border: 2px solid black; */
 }
 
 /* Text box */
 
 #text-wrapper {
-    border: 2px solid black;
-    padding: .5em;
+    /* border: 2px solid black; */
+}
 
+#text-form {
     display: flex;
-    flex-wrap: nowrap;
-    justify-content: center;
-    align-items: center;
 }
 
 #text-input {
-    width: 80%;
-    padding: 10px;
+    flex: 1 1 auto;
+    border: 1px solid #BBC1E1;
+    border-radius: 18px;
+    padding: .8em 1.5em; margin: 7px;
+    
 }
 
 #text-send {
-    padding: 10px;
-    margin-left: 10px;
+    border: none;
+    background-color: #1A8FE3;
+    color: white;
+    font-weight: 700;
+    border-radius: 10px;
+    padding: .8em 1.5em; margin: 7px;
+    transition: background 250ms ease-in-out, 
+    transform 150ms ease;
+}
+
+#text-send:hover,
+#text-send:focus {
+    background: #0053ba;
+}
+
+#text-send:active {
+    transform: scale(1.30);
+}
+
+/* Footer */
+
+footer {
+    display: flex;
+    justify-content: center;
+}
+
+#footer-section {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+#footer-section > * {
+    margin: 30px 20px;
+    color: black;
+    text-decoration: none;
+}
+
+a:hover{
+    color: tomato;
 }

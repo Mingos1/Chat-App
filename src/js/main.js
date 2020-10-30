@@ -1,4 +1,4 @@
-let socket = new WebSocket('wss://127.0.0.1:5500');
+let socket = new WebSocket('wss://localhost:5500');
 
 document.forms.publish.onsubmit = function() {
     let outgoingMessage = this.message.value;
